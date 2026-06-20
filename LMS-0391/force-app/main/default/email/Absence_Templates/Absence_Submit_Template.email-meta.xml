@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Sent to Approver when a Leave Request is submitted for approval.</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Absence Submit Template</name>
+    <style>none</style>
+    <subject>Leave Request Submitted - {!Absence__c.Requester__c} ({!Absence__c.Start_Date__c} to {!Absence__c.End_Date__c})</subject>
+    <textOnly>Dear {!Absence__c.Approver__c},
+
+A new leave request has been submitted and is awaiting your approval.
+
+Employee   : {!Absence__c.Requester__c}
+Start Date : {!Absence__c.Start_Date__c}
+End Date   : {!Absence__c.End_Date__c}
+
+Please review and take action at your earliest convenience.
+
+Regards,
+HR System</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

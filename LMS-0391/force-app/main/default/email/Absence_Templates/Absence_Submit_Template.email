@@ -1,0 +1,79 @@
+<html>
+<body style="margin:0; padding:0; background-color:#f4f6f8; font-family: Arial, Helvetica, sans-serif;">
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f4f6f8; padding:30px 0;">
+        <tr>
+            <td align="center">
+                <table width="500" cellpadding="0" cellspacing="0" border="0" style="background-color:#ffffff; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+
+                    <!-- Header -->
+                    <tr>
+                        <td style="background-color:#e68a00; padding:20px 30px;">
+                            <h1 style="margin:0; color:#ffffff; font-size:20px; font-weight:600;">
+                                ⏳ Leave Request Awaiting Approval
+                            </h1>
+                        </td>
+                    </tr>
+
+                    <!-- Body -->
+                    <tr>
+                        <td style="padding:30px;">
+                            <p style="margin:0 0 15px 0; font-size:15px; color:#333333;">
+                                Dear <strong>{!Absence__c.Approver__c}</strong>,
+                            </p>
+
+                            <p style="margin:0 0 20px 0; font-size:15px; color:#a85d00; background-color:#fff4e0; padding:12px 16px; border-left:4px solid #e68a00; border-radius:4px;">
+                                <strong>A new leave request has been submitted and is awaiting your approval.</strong>
+                            </p>
+
+                            <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; margin-bottom:20px;">
+                                <tr>
+                                    <td style="padding:12px 16px; background-color:#f2f4f6; border-bottom:1px solid #e0e0e0; font-size:14px; color:#555555; width:40%;"><strong>Employee Name</strong></td>
+                                    <td style="padding:12px 16px; background-color:#f2f4f6; border-bottom:1px solid #e0e0e0; font-size:14px; color:#222222;">{!Absence__c.Requester__c}</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:12px 16px; background-color:#ffffff; border-bottom:1px solid #e0e0e0; font-size:14px; color:#555555;"><strong>Start Date</strong></td>
+                                    <td style="padding:12px 16px; background-color:#ffffff; border-bottom:1px solid #e0e0e0; font-size:14px; color:#222222;">{!Absence__c.Start_Date__c}</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:12px 16px; background-color:#f2f4f6; font-size:14px; color:#555555;"><strong>End Date</strong></td>
+                                    <td style="padding:12px 16px; background-color:#f2f4f6; font-size:14px; color:#222222;">{!Absence__c.End_Date__c}</td>
+                                </tr>
+                            </table>
+
+                            <!-- Call to action button -->
+                            <table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:20px;">
+                                <tr>
+                                    <td style="background-color:#e68a00; border-radius:4px;">
+                                        <a href="{!URLFOR('/'+ Absence__c.Id)}" style="display:inline-block; padding:10px 22px; font-size:14px; color:#ffffff; text-decoration:none; font-weight:600;">
+                                            Review Request
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <p style="margin:0 0 20px 0; font-size:14px; color:#555555; line-height:1.5;">
+                                Please log in to Salesforce to review and take action on this request.
+                            </p>
+
+                            <p style="margin:0; font-size:14px; color:#333333;">
+                                Regards,<br/>
+                                <strong>HR System</strong>
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!-- Footer -->
+                    <tr>
+                        <td style="background-color:#f2f4f6; padding:15px 30px; text-align:center;">
+                            <p style="margin:0; font-size:12px; color:#999999;">
+                                This is an automated message from the Leave Management System.
+                            </p>
+                        </td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

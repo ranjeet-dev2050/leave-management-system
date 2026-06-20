@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Absence_Dates_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+ISNULL(Start_Date__c),
+ISNULL(End_Date__c)
+)</errorConditionFormula>
+    <errorMessage>Start date and end date is required.</errorMessage>
+</ValidationRule>
